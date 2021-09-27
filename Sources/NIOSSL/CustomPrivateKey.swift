@@ -76,6 +76,7 @@ public protocol NIOSSLCustomPrivateKey {
 /// Hashable conformance, which we don't use in any production code: only the tests use it. To that end, we don't
 /// mind too much that we need to do this.
 @usableFromInline
+@frozen
 internal struct AnyNIOSSLCustomPrivateKey: NIOSSLCustomPrivateKey, Hashable {
     @usableFromInline let _value: NIOSSLCustomPrivateKey
 

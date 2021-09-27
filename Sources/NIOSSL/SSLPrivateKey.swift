@@ -284,7 +284,6 @@ public class NIOSSLPrivateKey {
     ///
     /// - parameters:
     ///     - customPrivateKey: The custom private key to use with the TLS certificate.
-    @inlinable
     public init<CustomKey: NIOSSLCustomPrivateKey & Hashable>(customPrivateKey: CustomKey) {
         self.representation = .custom(AnyNIOSSLCustomPrivateKey(customPrivateKey))
     }
